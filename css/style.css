@@ -1,0 +1,108 @@
+@charset "UTF-8";
+/*
+
+0-600px => Phone
+600-900px => Tablet portrait
+900-1200px => Tablet landscape
+1800px+ => Big desktop
+
+*phone
+*tab-port
+*tab-land
+*desktop
+
+1em = 16px
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+}
+@media (min-width: 75em) {
+  html {
+    font-size: 62.5%;
+  }
+}
+@media (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+.slider {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 20vh;
+  width: 70vw;
+  position: absolute;
+  overflow: hidden;
+}
+@media (max-width: 37.5em) {
+  .slider {
+    width: 55vw;
+  }
+}
+.slider:hover {
+  cursor: grab;
+}
+.slider__inner {
+  position: absolute;
+  width: 207.1%;
+  left: 0;
+  top: 0;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  /* Bu olmadan buglı çalışıyor slider
+     Herhangi bir elementin hedeflenmesini engellemek için
+  */
+  pointer-events: none;
+}
+@media (max-width: 56.25em) {
+  .slider__inner {
+    width: 300%;
+  }
+}
+@media (max-width: 37.5em) {
+  .slider__inner {
+    width: 600%;
+  }
+}
+.slider__inner--item {
+  background-color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  width: 20vw;
+}
+@media (max-width: 56.25em) {
+  .slider__inner--item {
+    width: 46vw;
+  }
+  .slider__inner--item:not(:last-child) {
+    margin-right: 1rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .slider__inner--item {
+    width: 85vw;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
