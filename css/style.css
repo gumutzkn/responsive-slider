@@ -44,6 +44,7 @@ html {
 }
 
 .slider {
+  background-color: red;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -59,6 +60,9 @@ html {
 }
 .slider:hover {
   cursor: grab;
+}
+.slider:active {
+  cursor: grabbing;
 }
 .slider__inner {
   position: absolute;

@@ -46,6 +46,8 @@ window.addEventListener("mouseup", () => {
 slider.addEventListener("mousemove", (e) => {
   if (!pressed) return;
 
+  // OffsetX elementin clientX ile arasındaki boşluğun çıkarılmış hali
+  // clientX - (elemnt ile sayfa arasındaki boşluk) = offsetX
   x = e.offsetX;
   // başlangıçta iki değer de eşit kaydırmaya başlayınca x 0'a yaklaşır
   innerSlider.style.left = `${x - startx}px`;

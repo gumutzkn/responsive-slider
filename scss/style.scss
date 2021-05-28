@@ -27,7 +27,7 @@ html {
 }
 
 .slider {
-  // background-color: red;
+  background-color: red;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -42,6 +42,10 @@ html {
 
   &:hover {
     cursor: grab;
+  }
+
+  &:active {
+    cursor: grabbing;
   }
 
   &__inner {
